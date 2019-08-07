@@ -2,17 +2,17 @@ allRecipes = {}
 
 class Recipe():
 
-    def __init__(self, name, variant, building, rate, count, ingredients):
+    def __init__(self, name, variant, building, rate, makes, ingredients):
         self.name = name
         self.variant = variant
         self.building = building
         self.rate = rate #Per Minute
-        self.count = count #Per Operation
+        self.makes = makes #Per Operation
         self.ingredients = ingredients #Per Operation
         allRecipes[name] = self
 
 #Tier 0 Components
-#Recip('Name',					'Variant',		'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',					'Variant',		'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Biomass',				'Leaves',		'Constructor',	'90',	'6',	{'Leaves':10})
 Recipe('Biomass',				'Wood',			'Constructor',	'375',	'25',	{'Wood':5})
 Recipe('Cable',					'Default',		'Constructor',	'15',	'1',	{'Wire':2})
@@ -35,7 +35,7 @@ Recipe('Wire',					'Iron',			'Constructor',	'67.5',	'9',	{'Iron Ingot':2})
 Recipe('Wire',					'Caterium',		'Constructor',	'67.5',	'9',	{'Caterium Ingot':1})
 
 #Tier 1 Components
-#Recip('Name',			'Variant',	'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',			'Variant',	'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Biomass',		'Mycelia',	'Constructor',	'150',	'10',	{'Mycelia':10})
 Recipe('Biofuel',		'Default',	'Constructor',	'30',	'2',	{'Biomass':4})
 Recipe('Fabric',		'Default',	'Assembler',	'15',	'1',	{'Mycelia':1, 'Biomass':5})
@@ -44,21 +44,21 @@ Recipe('Power Shard',	'Yellow',	'Constructor',	'8',	'2',	{'Yellow Power Slug':1}
 Recipe('Power Shard',	'Purple',	'Constructor',	'15',	'5',	{'Purple Power Slug':1})
 
 #Tier 2 Components
-#Recip('Name',			'Variant',		'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',			'Variant',		'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Modular Frame',	'Default',		'Assembler',	'4',	'1',	{'Reinforced Iron Plate':3, 'Iron Rod':6})
 Recipe('Modular Frame',	'Alternate',	'Assembler',	'6',	'3',	{'Reinforced Iron Plate':6, 'Steel Pipe':6})
 Recipe('Rotor',			'Default',		'Assembler',	'6',	'1',	{'Iron Rod':3, 'Screw':22})
 Recipe('Rotor',			'Alternate',	'Assembler',	'9',	'3',	{'Steel Pipe':6, 'Wire':20})
 
 #Tier 3 Components
-#Recip('Name',				'Variant',			'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',				'Variant',			'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Biomass',			'Alien Carapace',	'Constructor',	'1500',	'100',	{'Alien Carapace':1})
 Recipe('Caterium Ingot',	'Default',			'Smelter',		'15',	'1',	{'Caterium Ore':3})
 Recipe('Quickwire',			'Default',			'Constructor',	'60',	'4',	{'Caterium Ingot':1})
 Recipe('Quickwire',			'Alternate',		'Assembler',	'90',	'12',	{'Caterium Ingot':1, 'Copper Ingot':2})
 
 #Tier 4 Components
-#Recip('Name',						'Variant',		'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',						'Variant',		'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Black Powder',				'Default',		'Assembler',	'7.5',	'1',	{'Coal':1, 'Sulfur':2})
 Recipe('Black Powder',				'Alternate',	'Assembler',	'15',	'4',	{'Compacted Coal':1, 'Sulfur':2})
 Recipe('Compacted Coal',			'Default',		'Assembler',	'30',	'3',	{'Coal':3, 'Sulfur':3})
@@ -82,7 +82,7 @@ Recipe('Steel Ingot',				'Alternate',	'Foundry',		'45',	'6',	{'Iron Ingot':3, 'C
 Recipe('Steel Pipe',				'Default',		'Constructor',	'15',	'1',	{'Steel Ingot':1})
 
 #Tier 5 Components
-#Recip('Name',					'Variant',		'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',					'Variant',		'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('A.I. Limiter',			'Default',		'Assembler',	'5',	'1',	{'Circuit Board':2, 'Quickwire':18})
 Recipe('Circuit Board',			'Default',		'Assembler',	'10',	'2',	{'Wire':12, 'Plastic':6})
 Recipe('Circuit Board',			'Alternate',	'Assembler',	'15',	'6',	{'Wire':24, 'Rubber':16})
@@ -99,11 +99,11 @@ Recipe('Rubber',				'Default',		'Oil Refinery',	'30',	'4',	{'Crude Oil':4})
 Recipe('Supercomputer',			'Default',		'Manufacturer',	'1.9',	'1',	{'Computer':2, 'A.I. Limiter':2, 'High-Speed Connector':3, 'Plastic':21})
 
 #Tier 6 Components
-#Recip('Name',		'Variant',	'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',		'Variant',	'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('TURBOFUEL',	'Default',	'Assembler',	'18.8',	'5',	{'Fuel':5, 'Compacted Coal':4})
 
 #Tier 7 Components
-#Recip('Name',							'Variant',		'Machine',				'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',							'Variant',		'Machine',				'Rate', 'Makes',{'Ingredient':1})
 Recipe('Alclad Aluminum Sheet',			'Default',		'Assembler',			'15',	'3',	{'Aluminum Ingot':3, 'Copper Ingot':2})
 Recipe('Aluminum Ingot',				'Default',		'Foundry',				'30',	'2',	{'Bauxite':7, 'Silica':6})
 Recipe('Battery',						'Default',		'Manufacturer',			'5.6',	'3',	{'Alclad Aluminum Sheet':8, 'Wire':24, 'Sulfur':20, 'Plastic':9})
@@ -122,7 +122,7 @@ Recipe('Uranium Cell',					'Default',		'Assembler',			'10',	'10',	{'Uranium':45,
 Recipe('Uranium Cell',					'Alternate',	'Manufacturer',			'17.5',	'35',	{'Uranium':45, 'Sulfur':45, 'Silica':45, 'Quickwire':60})
 
 #Tier 0 Tools
-#Recip('Name',				'Variant',		'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',				'Variant',		'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Beacon',			'Default',		'Manufacturer',					'7.5',	'1',	{'Iron Plate':3, 'Iron Rod':1, 'Wire':15, 'Cable':2})
 Recipe('Beacon',			'Alternate',	'Manufacturer',					'9.4',	'5',	{'Steel Beam':1, 'Steel Pipe':4, 'Crystal Oscillator':1})
 Recipe('Object Scanner',	'Default',		'Equipment Workshop (Manual)',	'1.5',	'1',	{'Reinforced Iron Plate':4, 'Beacon':3, 'Screw':50})
@@ -130,17 +130,17 @@ Recipe('Portable Miner',	'Default',		'Equipment Workshop (Manual)',	'1.5',	'1',	
 Recipe('Xeno-Zapper',		'Default',		'Equipment Workshop (Manual)',	'1.5',	'1',	{'Iron Rod':10, 'Reinforced Iron Plate':2, 'Cable':15, 'Wire':50})
 
 #Tier 1 Tools
-#Recip('Name',	'Variant',	'Machine',	'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',	'Variant',	'Machine',	'Rate', 'Makes',{'Ingredient':1})
 
 #Tier 2 Tools
-#Recip('Name',				'Variant',	'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',				'Variant',	'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Chainsaw',			'Default',	'Equipment Workshop (Manual)',	'1',	'1',	{'Reinforced Iron Plate':10, 'Iron Rod':25, 'Screw':160, 'Cable':15})
 Recipe('Color Gun',			'Default',	'Equipment Workshop (Manual)',	'0.75',	'1',	{'Iron Plate':5, 'Screw':80, 'Wire':40})
 Recipe('Color Cartridge',	'Default',	'Constructor',					'75',	'50',	{'Flower Petals':25})
 Recipe('Parachute',			'Default',	'Equipment Workshop (Manual)',	'7.5',	'5',	{'Fabric':10, 'Cable':5})
 
 #Tier 3 Tools
-#Recip('Name',				'Variant',		'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',				'Variant',		'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Blade Runners',		'Default',		'Equipment Workshop (Manual)',	'0.75',	'1',	{'Quickwire':50, 'Modular Frame':3, 'Rotor':3})
 Recipe('Medicinal Inhaler',	'Default',		'Equipment Workshop (Manual)',	'3',	'1',	{'Bacon Agaric':1, 'Paleberry':2, 'Beryl Nut':3, 'Mycelia':5})
 Recipe('Medicinal Inhaler',	'Alien Organs',	'Equipment Workshop (Manual)',	'3',	'1',	{'Alien Organs':3, 'Mycelia':5})
@@ -148,30 +148,30 @@ Recipe('Rebar Gun',			'Default',		'Equipment Workshop (Manual)',	'0.6',	'1',	{'R
 Recipe('Spiked Rebar',		'Default',		'Constructor',					'15',	'1',	{'Iron Rod':1})
 
 #Tier 4 Tools
-#Recip('Name',					'Variant',		'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',					'Variant',		'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Nobelisk Detonator',	'Default',		'Equipment Workshop (Manual)',	'0.75',	'1',	{'Object Scanner':5, 'Encased Industrial Beam':10, 'Cable':50})
 Recipe('Nobelisk',				'Default',		'Manufacturer',					'3',	'1',	{'Black Powder':5, 'Steel Pipe':5, 'Beacon':1})
 Recipe('Nobelisk',				'Alternate',	'Manufacturer',					'4.5',	'3',	{'Black Powder':10, 'Steel Pipe':10, 'Crystal Oscillator':1})
 Recipe('Xeno-Basher',			'Default',		'Equipment Workshop (Manual)',	'0.75',	'1',	{'Modular Frame':5, 'Xeno-Zapper':2, 'Cable':25, 'Wire':500})
 
 #Tier 5 Tools
-#Recip('Name',		'Variant',	'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',		'Variant',	'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Rifle',		'Default',	'Equipment Workshop (Manual)',	'0.5',	'1',	{'Steel Pipe':25, 'Heavy Modular Frame':3, 'Circuit Board':20, 'Screw':250})
 Recipe('Cartridge',	'Default',	'Assembler',					'12',	'4',	{'Nobelisk':1, 'Steel Pipe':4})
 
 #Tier 6 Tools
-#Recip('Name',		'Variant',	'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',		'Variant',	'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Gas Mask',	'Default',	'Equipment Workshop (Manual)',	'0.75',	'1',	{'Rubber':100, 'Plastic':100, 'Fabric':100})
 Recipe('Filter',	'Default',	'Manufacturer',					'7.5',	'1',	{'Coal':5, 'Rubber':2, 'Fabric':2})
 Recipe('Jetpack',	'Default',	'Equipment Workshop (Manual)',	'0.5',	'1',	{'Plastic':50, 'Circuit Board':15, 'Rubber':50, 'Cable':25})
 
 #Tier 7 Tools
-#Recip('Name',					'Variant',	'Machine',						'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',					'Variant',	'Machine',						'Rate', 'Makes',{'Ingredient':1})
 Recipe('Hazmat Suit',			'Default',	'Equipment Workshop (Manual)',	'0.5',	'1',	{'Rubber':50, 'Plastic':50, 'Alclad Aluminum Plate':50, 'Fabric':50})
 Recipe('Iodine Infused Filter',	'Default',	'Manufacturer',					'3.75',	'1',	{'Filter':1, 'Quickwire':8,	'Rubber':2})
 
 #Resources Ores
-#Recip('Name',		'Variant',	'Machine',		'Rate', 'Count',{'Ingredient':1})
+#Recipe('Name',		'Variant',	'Machine',		'Rate', 'Makes',{'Ingredient':1})
 Recipe('Bauxite',		'Impure',	'Miner MK3',	'120',	'1',	{})
 Recipe('Bauxite',		'Normal',	'Miner MK3',	'240',	'1',	{})
 Recipe('Bauxite',		'Pure',		'Miner MK3',	'480',	'1',	{}) #Max Output Capped by Belt MK5
