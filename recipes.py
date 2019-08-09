@@ -93,7 +93,7 @@ Recipe('Computer',				'Default',		'Manufacturer',	1.9,	1,	{'Circuit Board':10, '
 Recipe('Fuel',					'Default',		'Oil Refinery',	37.5,	5,	{'Crude Oil':8})
 Recipe('High-Speed Connector',	'Default',		'Manufacturer',	2.5,	1,	{'Quickwire':40, 'Cable':10, 'Plastic':6})
 #Recipe('High-Speed Connector',	'Alternate',	'Manufacturer',	3.8,	3,	{'Quickwire':66, 'Silica':48, 'Rubber':18})
-Recipe('Plastic',				'Default',		'Refinery',		22.5,	3,	{'Crude Oil':4})
+Recipe('Plastic',				'Default',		'Oil Refinery',		22.5,	3,	{'Crude Oil':4})
 #Recipe('Plastic',				'Alternate',	'Assembler',	33.8,	9,	{'Rubber':8, 'Fuel':5})
 Recipe('Rubber',				'Default',		'Oil Refinery',	30,	4,	{'Crude Oil':4})
 Recipe('Supercomputer',			'Default',		'Manufacturer',	1.9,	1,	{'Computer':2, 'A.I. Limiter':2, 'High-Speed Connector':3, 'Plastic':21})
