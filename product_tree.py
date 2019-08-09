@@ -104,6 +104,7 @@ class ProductTree(nx.DiGraph):
         #Color all nodes
         cmap = self._get_color_map()
         #Draw
+        plt.figure(figsize=(18,10))
         nx.draw(self, with_labels=True, font_size=8, node_color=cmap, pos=self.pos, node_shape='D', node_size=2000)
         plt.show()
 
